@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="{charset}" />
+	<title>{blog_nom}</title>
+	<meta name="generator" content="BlogoText" />
+	<meta name="robots" content="all" />
+	<meta name="author" content="{blog_auteur}" />
+	<meta name="viewport" content="width=device-width, user-scalable=yes" />
+	<meta name="description" content="{blog_description}" />
+	<link type="text/css" rel="stylesheet" href="{style}/style.css" />
+	<link type="application/rss+xml" rel="alternate" title="RSS 2.0 - Articles Résumés" href="{rss}" />
+	<link type="application/rss+xml" rel="alternate" title="RSS 2.0 - Articles Complets" href="{rss}?full" />
+	<link rel="stylesheet" href="{style}/styles/tomorrow-night.css">
+	<script src="{style}/highlight.pack.js"></script>
+	<script>hljs.tabReplace = '    '; // 4 spaces
+	hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+
+
+<header id="top">
+<h1><a href="{racine_du_site}">{blog_nom}</a></h1>
+<h2>{blog_description}</h2>
+</header>
+
+<div id="wrapper">
+
+	<section id="contenu">
+		{BOUCLE_posts}
+
+		// ici il s'affichera ce qu'on veut : un article, un commentaire, un lien sauvé…
+		// les thèmes pour ces choses sont dans le dossier "template"
+		// chaque "objet" (lien, article, …) dispose de son propre formatage. 
+
+		// **** le texte que vous mettez ici (dans la "boucle") ne sera pas éxécuté ni affiché. ****
+
+		{/BOUCLE_posts}
+		
+	</section>
+
+
+	{pagination}
+</div> <!-- einde #wrapper -->
+
+
+<footer><b>{blog_auteur}</b>, tout droits réservés – Publié avec <a href="http://lehollandaisvolant.net/blogotext/">BlogoText</a> – Thème par <a href="http://lehollandaisvolant.net/">Timo van Neerden</a> modifié par <a hre"=shre.me">Debetux.</a></footer>
+
+
+</body>
+</html>
